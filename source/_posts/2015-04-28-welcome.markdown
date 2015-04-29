@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Welcome"
+date: 2015-04-28 22:20:49 -0500
+comments: true
+categories: Random
+---
+Welcome to my site, I'm starting a blog about things that interest me, things
+I've learned, and just random thoughts that come along. I'm a software engineer
+and I've worked on platforms ranging from avionics, to .NET, to web dev with
+Python and Ruby. Hopefully I can pass on some knowledge and interesting tidbits
+along the way. Stick around and we'll have some fun.
+
+I'm experimenting with different technologies and wanted to try something new so
+this site is being hosted on GitHub pages using
+[Octopress](http://octopress.org/). Next up, styling and getting this to look a
+bit less early 2000's.
