@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://pwojt.github.io/sitemap.xml 
+Sitemap: http://wojtowicz.technology/sitemap.xml 

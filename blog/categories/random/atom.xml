@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Random | Wojtowicz Technologies]]></title>
-  <link href="http://pwojt.github.io/blog/categories/random/atom.xml" rel="self"/>
-  <link href="http://pwojt.github.io/"/>
-  <updated>2015-04-28T22:44:35-05:00</updated>
-  <id>http://pwojt.github.io/</id>
+  <title><![CDATA[Category: Random | wojtowicz_technology]]></title>
+  <link href="http://wojtowicz.technology/blog/categories/random/atom.xml" rel="self"/>
+  <link href="http://wojtowicz.technology/"/>
+  <updated>2015-04-30T23:21:28-05:00</updated>
+  <id>http://wojtowicz.technology/</id>
   <author>
     <name><![CDATA[Przemek Wojtowicz]]></name>
-    
+    <email><![CDATA[p.wojtowicz@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Welcome]]></title>
-    <link href="http://pwojt.github.io/blog/2015/04/28/welcome/"/>
+    <link href="http://wojtowicz.technology/blog/2015/04/28/welcome/"/>
     <updated>2015-04-28T22:20:49-05:00</updated>
-    <id>http://pwojt.github.io/blog/2015/04/28/welcome</id>
+    <id>http://wojtowicz.technology/blog/2015/04/28/welcome</id>
     <content type="html"><![CDATA[<p>Welcome to my site, I&rsquo;m starting a blog about things that interest me, things
 I&rsquo;ve learned, and just random thoughts that come along. I&rsquo;m a software engineer
 and I&rsquo;ve worked on platforms ranging from avionics, to .NET, to web dev with
