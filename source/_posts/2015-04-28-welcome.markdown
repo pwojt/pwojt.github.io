@@ -5,7 +5,7 @@ date: 2015-04-28 22:20:49 -0500
 comments: true
 categories: Random
 ---
-Welcome to my site, I'm starting a blog about things that interest me, things
+Welcome to my site, I'm starting to write about things that interest me, things
 I've learned, and just random thoughts that come along. I'm a software engineer
 and I've worked on platforms ranging from avionics, to .NET, to web dev with
 Python and Ruby. Hopefully I can pass on some knowledge and interesting tidbits
