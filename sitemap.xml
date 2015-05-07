@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://wojtowicz.technology/blog/2015/05/05/wordpress-on-aws-ec2-container-service/</loc>
+    <lastmod>2015-05-05T21:47:04-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://wojtowicz.technology/blog/2015/04/28/welcome/</loc>
     <lastmod>2015-04-28T22:20:49-05:00</lastmod>
   </url>
@@ -12,5 +16,14 @@
   </url>
   <url>
     <loc>http://wojtowicz.technology/blog/categories/random/</loc>
+  </url>
+  <url>
+    <loc>http://wojtowicz.technology/blog/categories/wordpress/</loc>
+  </url>
+  <url>
+    <loc>http://wojtowicz.technology/blog/categories/deployment/</loc>
+  </url>
+  <url>
+    <loc>http://wojtowicz.technology/blog/categories/aws/</loc>
   </url>
 </urlset>

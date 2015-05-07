@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[wojtowicz_technology]]></title>
-  <link href="http://wojtowicz.technology/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Wordpress | wojtowicz_technology]]></title>
+  <link href="http://wojtowicz.technology/blog/categories/wordpress/atom.xml" rel="self"/>
   <link href="http://wojtowicz.technology/"/>
   <updated>2015-05-07T00:01:47-05:00</updated>
   <id>http://wojtowicz.technology/</id>
@@ -91,118 +91,62 @@ but I&rsquo;ll get to that later.</p>
 Console / Task Definitions and create a new task and enter the definition in
 JSON:</p>
 
-<figure class='code'><figcaption><span>WordPress ECS Task Definition</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="nt">&quot;containerDefinitions&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>      <span class="nt">&quot;portMappings&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>          <span class="nt">&quot;hostPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
-</span><span class='line'>          <span class="nt">&quot;containerPort&quot;</span><span class="p">:</span> <span class="mi">80</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>      <span class="p">],</span>
-</span><span class='line'>      <span class="nt">&quot;environment&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;WORDPRESS_DB_USER&quot;</span><span class="p">,</span>
-</span><span class='line'>          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;USER_NAME_FOR_RDS&quot;</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MYSQL_PORT_3306_TCP&quot;</span><span class="p">,</span>
-</span><span class='line'>          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp://RDS_ADDRESS:3306&quot;</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;WORDPRESS_DB_NAME&quot;</span><span class="p">,</span>
-</span><span class='line'>          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;RDS_DATABASE_NAME&quot;</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;WORDPRESS_DB_PASSWORD&quot;</span><span class="p">,</span>
-</span><span class='line'>          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;RDS_DATABASE_PASSWORD&quot;</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;WORDPRESS_DB_HOST&quot;</span><span class="p">,</span>
-</span><span class='line'>          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;RDS_ADDRESS&quot;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>      <span class="p">],</span>
-</span><span class='line'>      <span class="nt">&quot;essential&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;mountPoints&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>          <span class="nt">&quot;containerPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/var/www/html&quot;</span><span class="p">,</span>
-</span><span class='line'>          <span class="nt">&quot;sourceVolume&quot;</span><span class="p">:</span> <span class="s2">&quot;wordpress-vol&quot;</span><span class="p">,</span>
-</span><span class='line'>          <span class="nt">&quot;readOnly&quot;</span><span class="p">:</span> <span class="kc">false</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>      <span class="p">],</span>
-</span><span class='line'>      <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;wordpress&quot;</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;wordpress&quot;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">],</span>
-</span><span class='line'>  <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>      <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nt">&quot;sourcePath&quot;</span><span class="p">:</span> <span class="s2">&quot;/ecs/webdata/wordpress&quot;</span>
-</span><span class='line'>      <span class="p">},</span>
-</span><span class='line'>      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;wordpress-vol&quot;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">],</span>
-</span><span class='line'>  <span class="nt">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;wordpress&quot;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="json WordPress ECS Task Definition">{
+  "containerDefinitions": [
+    {
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "environment": [
+        {
+          "name": "WORDPRESS_DB_USER",
+          "value": "USER_NAME_FOR_RDS"
+        },
+        {
+          "name": "MYSQL_PORT_3306_TCP",
+          "value": "tcp://RDS_ADDRESS:3306"
+        },
+        {
+          "name": "WORDPRESS_DB_NAME",
+          "value": "RDS_DATABASE_NAME"
+        },
+        {
+          "name": "WORDPRESS_DB_PASSWORD",
+          "value": "RDS_DATABASE_PASSWORD"
+        },
+        {
+          "name": "WORDPRESS_DB_HOST",
+          "value": "RDS_ADDRESS"
+        }
+      ],
+      "essential": true,
+      "mountPoints": [
+        {
+          "containerPath": "/var/www/html",
+          "sourceVolume": "wordpress-vol",
+          "readOnly": false
+        }
+      ],
+      "memory": 256,
+      "name": "wordpress",
+      "cpu": 128,
+      "image": "wordpress"
+    }
+  ],
+  "volumes": [
+    {
+      "host": {
+        "sourcePath": "/ecs/webdata/wordpress"
+      },
+      "name": "wordpress-vol"
+    }
+  ],
+  "family": "wordpress"
+}
+</code></pre>
 
 <p>This will define one container running WordPress that will connect to a defined
 RDS MySQL database with the user/password combination you created previously. It
@@ -295,24 +239,6 @@ not sure how I&rsquo;ll protect against that so that there is very limited down 
 but I&rsquo;ll need to figure out a good way to store the WordPress configuration and
 automatically load it to the AMI. This should all be doable with CloudFormation,
 but one step at a time.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Welcome]]></title>
-    <link href="http://wojtowicz.technology/blog/2015/04/28/welcome/"/>
-    <updated>2015-04-28T22:20:49-05:00</updated>
-    <id>http://wojtowicz.technology/blog/2015/04/28/welcome</id>
-    <content type="html"><![CDATA[<p>Welcome to my site, I&rsquo;m starting to write about things that interest me, things
-I&rsquo;ve learned, and just random thoughts that come along. I&rsquo;m a software engineer
-and I&rsquo;ve worked on platforms ranging from avionics, to .NET, to web dev with
-Python and Ruby. Hopefully I can pass on some knowledge and interesting tidbits
-along the way. Stick around and we&rsquo;ll have some fun.</p>
-
-<p>I&rsquo;m experimenting with different technologies and wanted to try something new so
-this site is being hosted on GitHub pages using
-<a href="http://octopress.org/">Octopress</a>. Next up, styling and getting this to look a
-bit less early 2000&rsquo;s.</p>
 ]]></content>
   </entry>
   
