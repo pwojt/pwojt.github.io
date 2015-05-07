@@ -197,7 +197,26 @@ that a bit.
 Use W3 Total Cache plug in to set up a CDN using CloudFront and S3. This will
 upload your files to S3 and host them through the CloudFront CDN. I'm not
 providing detailed instructions, but make sure that you set up CloudFront to
-forward headers.
+forward headers. This only backs up resource files, which frees up the server
+from serving these files and backs them up, but it still doesn't mean that all
+the files are back up. Need to figure out how to get everything backed up and
+off the machine.
+
+###Email
+
+The first thing you might notice is that email is broken. While that's an
+inconvenience, it's a real problem if you have a contact form on the site or use
+the site to send any sort of email. This stems from the fact that the container
+lacks a `sendmail` function that's standard on Linux servers. So I've tried to
+find a solution to this and while there are many workarounds, including starting
+another task for email, that's all overkill and doesn't really make email work
+any better. The best way solution I actually found is using
+[Mandrill](http://mandrill.com/) and [wpMandrill
+Plugin](https://wordpress.org/plugins/wpmandrill/). Settings both of these up
+allows email to be sent directly through Mandrill servers using an API call,
+by-passing the send mail function all together. No need to host anything on the
+server. The other positive of doing it this way is that the emails will be less
+likely to be marked as spam. Solved!
 
 ###Create an AMI Image of the EC2 instance
 
